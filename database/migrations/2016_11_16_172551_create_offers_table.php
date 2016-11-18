@@ -19,10 +19,10 @@ class CreateOffersTable extends Migration
 
             $table->string('offerName');
             $table->json('links');
-            $table->string('thumbnail_url');
+            $table->string('thumbnailUrl');
             $table->string('priceValue');
             $table->string('priceFromValue');
-            $table->string('discountPercentage');
+            $table->string('discountPercent');
 
             $table->string('categoryId');
             $table->string('productId');

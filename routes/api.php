@@ -17,5 +17,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
 
-
-Route::resource('offer', 'OfferController');
+Route::group (['prefix' => 'offer'], function () {
+    Route::get();
+});

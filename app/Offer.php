@@ -12,19 +12,26 @@ class Offer extends Model
      *
      * @var array
      */
+    protected $offer_id;
+    protected $offerName;
+    protected $links;
+    protected $thumbnailUrl;
+    protected $priceValue;
+    protected $priceFromValue;
+    protected $discountPercent;
+    protected $categoryId;
+    protected $productId;
+
     protected $fillable = [
+        'offer_id',             //ID da oferta.
         'offerName',            //Nome da oferta.
-        'categoryName',         //Nome da categoria da oferta.
-        'offer_link',           //Lomadee offer link
-        //'links>link[]',         //Lista de links da oferta.
-        //'links>link[]>type',    //Tipo do link. Manter "offer".
-        //'links>link[]>url',     //URL da oferta.
-        'thumbnail>url',        //URL da imagem da oferta.
+        'links',                //Lomadee offer link
+        'thumbnailUrl',         //URL da imagem da oferta.
         'priceValue',           //Valor da oferta (Preço por: ). (Formato 0.0)
         'priceFromValue',       //Preço da oferta (Preço de: ). (Formato 0.0)
-        'discountPercentage',   //Porcentagem de desconto.
-        'category_id',  //ID da categoria. It was categoryId (warning!!!!!)
-        'offer_id',    //ID da oferta.
+        'discountPercent',   //Porcentagem de desconto.
+        'categoryId',  //ID da categoria. It was categoryId (warning!!!!!)
+
         'productId',   //ID do produto.
     ];
 
@@ -34,7 +41,7 @@ class Offer extends Model
      * @var array
      */
     protected $hidden = [
-        'id',
+        'id', 'created_at', 'updated_at'
     ];
 
     public function seller()

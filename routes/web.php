@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' => 'offer'], function () {
+    Route::get('store-offers', 'OfferController@storeOffers');
+});
