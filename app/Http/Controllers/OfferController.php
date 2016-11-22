@@ -92,7 +92,9 @@ class OfferController extends Controller
 
         $offer->save();
         dd($offer);
-
+        /*
+         * uma alteração para teste
+         */
 
 
     }
